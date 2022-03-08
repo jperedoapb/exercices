@@ -1,2 +1,0 @@
-# exercices
-some interesting exercises
