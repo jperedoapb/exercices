@@ -1,0 +1,2 @@
+# exercices
+some interesting exercises
