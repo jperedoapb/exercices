@@ -5,30 +5,30 @@ import java.util.stream.Collectors;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Alejandro {
+public class ReverseWords {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		final String REGEX = "\\p{Punct}";
+		String delimiters = "\\s+|,\\,s+";
 		// create a pattern
 		Pattern pattern = Pattern.compile(REGEX);
 
-		String str = "9th day";
+		// String str = "Hello, world!, HOLa!";
+		// String str = "9th day";
+		String str = "Hello, world!";
 		String charToAdd = null;
 
 		// get a matcher object
 		Matcher matcher = pattern.matcher(str);
 
-		String delimiters = "\\s+|,\\,s+";
+		
 
-		// Splitting the string based on space and reverse each part
-		// and then join
+		// Splitting the string based on space and reverse each part and then join
 		String result = Arrays.asList(str.split(delimiters)).stream().map(s -> new StringBuilder(s).reverse())
 				.collect(Collectors.joining(" "));
 
 		
-		
-
 		result = result.replaceAll(REGEX, "");
 
 		while (matcher.find()) {
@@ -48,7 +48,7 @@ public class Alejandro {
 			}
 
 		}
-		System.out.println("Resultado: " + result);
+		System.out.println("Result: " + result);
 
 	}
 
